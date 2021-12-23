@@ -18,7 +18,10 @@
         }
     },
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "php": ">=7.3",
+        "ext-simplexml": "*"
+    },
     "config": {
         "sort-packages": true
     },
