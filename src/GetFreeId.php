@@ -4,11 +4,11 @@ namespace vitkuz573;
 
 class GetFreeId
 {
-    public static function inXML($file, $element, $property = 'id')
+    public static function inXML($file, $element, $property = 'id', $start_id = 1)
     {
         $xml = simplexml_load_file($file);
 
-        $id = 1;
+        $id = $start_id;
 
         $elements = [];
 
