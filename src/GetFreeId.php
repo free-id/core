@@ -17,7 +17,7 @@ class GetFreeId
         }
 
         while (true) {
-            if (in_array($id, $items)) {
+            if (!in_array($id, $items)) {
                 return $id;
             }
             $id = $id + 1;
