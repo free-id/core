@@ -10,8 +10,14 @@ class GetFreeId
 
         $id = 1;
 
+        $items = null;
+
+        foreach ($xml->xpath('//' . $node . '/@' . $property) as $item) {
+            $items[] = (int) $item;
+        }
+
         while (true) {
-            if (!$xml->xpath('//' . $node . '/[@' . $property . '=' . $id . ']') !== null) {
+            if (in_array($id, $items)) {
                 return $id;
             }
             $id = $id + 1;
