@@ -2,7 +2,7 @@
 
 namespace vitkuz573;
 
-class GetFreeId
+class GetFreeID
 {
     public static function inXML($file, $element, $property = 'id', $start_id = 1)
     {
