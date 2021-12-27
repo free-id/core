@@ -21,7 +21,7 @@ Package to get a free id (for example: in XML)
 
 use vitkuz573\GetFreeID;
 
-// GetFreeId::inXML('test.xml', 'node', 'other_id', '10');
+// GetFreeID::inXML('test.xml', 'node', 'other_id', '10');
 GetFreeID::inXML('test.xml', 'node');
 ```
 
