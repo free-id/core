@@ -4,7 +4,7 @@ namespace vitkuz573;
 
 class GetFreeID
 {
-    public static function inXML($file, $element, $property = 'id', $start_id = 1)
+    public static function inXML($file, $element, $attribute = 'id', $start_id = 1)
     {
         $xml = simplexml_load_file($file);
 
@@ -12,7 +12,7 @@ class GetFreeID
 
         $elements = [];
 
-        foreach ($xml->xpath('//' . $element . '/@' . $property) as $element) {
+        foreach ($xml->xpath('//' . $element . '/@' . $attribute) as $element) {
             $elements[] = (int) $element;
         }
 
