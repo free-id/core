@@ -1,12 +1,14 @@
 <?php
 
-namespace vitkuz573;
+declare(strict_types=1);
 
-class GetFreeID
+namespace Vitkuz573\FreeId;
+
+class InXml extends FreeId
 {
-    public static function inXML($file, $element, $attribute = 'id', $start_id = 1)
+    public function __invoke(string $path, string $element, string $attribute = 'id', int $start_id = 1): int
     {
-        $xml = simplexml_load_file($file);
+        $xml = simplexml_load_file($path);
 
         $id = $start_id;
 
@@ -17,7 +19,7 @@ class GetFreeID
         }
 
         while (true) {
-            if (!in_array($id, $elements)) {
+            if (! in_array($id, $elements)) {
                 return $id;
             }
             $id = $id + 1;
