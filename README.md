@@ -6,10 +6,6 @@
 
 Package to get a free id (for example: in XML)
 
-## Requirements
-
-- PHP >= 7.3
-
 ## Installation
 
 ```composer require vitkuz573/free-id```
@@ -19,7 +15,7 @@ Package to get a free id (for example: in XML)
 ```php
 <?php
 
-use Vitkuz573\FreeID;
+use Vitkuz573\FreeId;
 
 // FreeId\inXml('test.xml', 'node', 'other_id', '10');
 FreeId\inXml('test.xml', 'node');
