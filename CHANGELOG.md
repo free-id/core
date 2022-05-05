@@ -14,6 +14,11 @@ Changes unreleased.
 - main:
   - update documentation ([d00db85](https://github.com/vitkuz573/free-id/commit/d00db85abdccb583df7c2c59ae5c82e5ef854284))
 
+### Refactor
+
+- main:
+  - move traversing method to base parser ([990db9a](https://github.com/vitkuz573/free-id/commit/990db9a191c4c0886ee5d19fcb95079584c1243b))
+
 ## [2.0.0](https://github.com/vitkuz573/free-id/releases/tag/2.0.0) - 2022-05-05 07:46:15
 
 Second release! 🔥
