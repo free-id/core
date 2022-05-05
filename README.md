@@ -1,13 +1,18 @@
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Total Downloads][ico-downloads]][link-downloads]
+<h1 align="center">
+  Free ID
+</h1>
 
-# Free ID
+<p align="center">Package to get a free id (for example: in XML, Json, etc...)</p>
 
-Package to get a free id (for example: in XML, Json, etc...)
+<p align="center">
+    <a href="https://php.net" target="_blank"><img src="https://img.shields.io/badge/PHP-8.0+-00ADD8?style=for-the-badge&logo=php" alt="php version"/></a>
+    &nbsp;
+    <img src="https://img.shields.io/badge/license-mit-red?style=for-the-badge&logo=none" alt="license"/>
+</p>
 
-## Installation
+## ⚡️ Quick start
 
-1) Install the package using Composer
+Install the package using Composer
 ```bash
 composer require vitkuz573/free-id
 ```
@@ -71,14 +76,14 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details and a todolist.
 
 If you discover any security related issues, please email [vitkuz573@gmail.com](mailto:vitkuz573@gmail.com) instead of using the issue tracker.
 
-## Credits
+## ✌️ Credits
 
 - [Vitaly Kuzyaev][link-author]
 - [All Contributors][link-contributors]
 
-## License
+## ⚠️ License
 
-MIT. Please see the [license file](LICENSE) for more information.
+`Free ID` is free and open-source software licensed under the [MIT](https://github.com/vitkuz573/free-id/blob/main/LICENSE).
 
 ## Other
 
