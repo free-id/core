@@ -1,8 +1,16 @@
 # CHANGELOG
 
-## Unreleased
+## [1.0.0](https://github.com/vitkuz573/free-id/releases/tag/1.0.0) - 2022-05-05 05:09:34
 
-Changes unreleased.
+First release 💥
+
+## What's Changed
+* Bump actions/cache from 2 to 3 by @dependabot in https://github.com/vitkuz573/free-id/pull/1
+
+## New Contributors
+* @dependabot made their first contribution in https://github.com/vitkuz573/free-id/pull/1
+
+**Full Changelog**: https://github.com/vitkuz573/free-id/commits/1.0.0
 
 ### Feature
 
