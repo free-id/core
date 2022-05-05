@@ -4,6 +4,11 @@
 
 Changes unreleased.
 
+### Feature
+
+- main:
+  - adding json search functionality ([9e83ef6](https://github.com/vitkuz573/free-id/commit/9e83ef6efb051e9ceb74b6954b84b8e0a56e77de))
+
 ### Documentation
 
 - main:
