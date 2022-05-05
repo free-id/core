@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## Unreleased
+
+Changes unreleased.
+
+### Documentation
+
+- main:
+  - update README.md ([770883f](https://github.com/vitkuz573/free-id/commit/770883febe99770a79142c30c1695108e01226e8))
+
 ## [1.0.0](https://github.com/vitkuz573/free-id/releases/tag/1.0.0) - 2022-05-05 05:09:34
 
 First release 💥
