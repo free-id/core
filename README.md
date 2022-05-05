@@ -1,5 +1,5 @@
-[![Latest Stable Version](http://poser.pugx.org/vitkuz573/free-id/v)](https://packagist.org/packages/vitkuz573/free-id) [![Total Downloads](http://poser.pugx.org/vitkuz573/free-id/downloads)](https://packagist.org/packages/vitkuz573/free-id) [![Latest Unstable Version](http://poser.pugx.org/vitkuz573/free-id/v/unstable)](https://packagist.org/packages/vitkuz573/free-id) [![License](http://poser.pugx.org/vitkuz573/free-id/license)](https://packagist.org/packages/vitkuz573/free-id) [![PHP Version Require](http://poser.pugx.org/vitkuz573/free-id/require/php)](https://packagist.org/packages/vitkuz573/free-id)
-[![PHP Composer](https://github.com/vitkuz573/free-id/actions/workflows/php.yml/badge.svg)](https://github.com/vitkuz573/free-id/actions/workflows/php.yml)
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Total Downloads][ico-downloads]][link-downloads]
 
 # Free ID
 
@@ -25,6 +25,41 @@ $free_id('test.xml', 'node', 'other_id', '10');
 $free_id('test.xml', 'node');
 ```
 
+## Change log
+
+Please see the [changelog](CHANGELOG.md) for more information on what has changed recently.
+
+## Testing
+
+```bash
+composer test
+```
+
+## Contributing
+
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details and a todolist.
+
+## Security
+
+If you discover any security related issues, please email [vitkuz573@gmail.com](mailto:vitkuz573@gmail.com) instead of using the issue tracker.
+
+## Credits
+
+- [Vitaly Kuzyaev][link-author]
+- [All Contributors][link-contributors]
+
+## License
+
+MIT. Please see the [license file](LICENSE) for more information.
+
 ## Other
 
-Other packages can be found in the repository: https://github.com/vitkuz573/composer_packages
+My other packages can be found in the following [repository](https://github.com/vitkuz573/composer_packages)
+
+[ico-version]: https://img.shields.io/packagist/v/vitkuz573/free-id.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/vitkuz573/free-id.svg?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/vitkuz573/free-id
+[link-downloads]: https://packagist.org/packages/vitkuz573/free-id
+[link-author]: https://github.com/vitkuz573
+[link-contributors]: ../../contributors
