@@ -9,5 +9,10 @@ interface File
     /**
      * Get free ID in the file
      */
-    public function __invoke(string $path, string $element, string $attribute = 'id', int $start_id = 1): int;
+    public function __invoke(
+        string $path,
+        string $element,
+        string $attribute = 'id',
+        int $start_id = 1
+    ): int;
 }

@@ -3,7 +3,7 @@
 
 # Free ID
 
-Package to get a free id (for example: in XML)
+Package to get a free id (for example: in XML, Json, etc...)
 
 ## Installation
 
@@ -18,7 +18,7 @@ composer require vitkuz573/free-id
 ```php
 <?php
 
-use Vitkuz573\FreeId\Xml;
+use Vitkuz573\FreeId\Parsers\File\Xml;
 
 $free_id = new Xml();
 
@@ -30,7 +30,7 @@ echo $free_id('test.xml', 'node');
 ```php
 <?php
 
-use Vitkuz573\FreeId\Json;
+use Vitkuz573\FreeId\Parsers\File\Json;
 
 $free_id = new Json();
 

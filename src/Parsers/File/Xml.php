@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Vitkuz573\FreeId;
+namespace Vitkuz573\FreeId\Parsers\File;
 
 use Vitkuz573\FreeId\Contracts\File;
 
@@ -11,7 +11,12 @@ class Xml implements File
     /**
      * @inheritDoc
      */
-    public function __invoke(string $path, string $element, string $attribute = 'id', int $start_id = 1): int
+    public function __invoke(
+        string $path,
+        string $element,
+        string $attribute = 'id',
+        int $start_id = 1
+    ): int
     {
         $xml = simplexml_load_file($path);
 

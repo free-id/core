@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Vitkuz573\FreeId\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Vitkuz573\FreeId\Xml;
+use Vitkuz573\FreeId\Parsers\File\Xml;
 
 final class XmlTest extends TestCase
 {
