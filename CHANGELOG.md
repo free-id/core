@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## Unreleased
+
+Changes unreleased.
+
+### Feature
+
+- main:
+  - adding MySQL search functionality ([3f95153](https://github.com/vitkuz573/free-id/commit/3f951535e2e8ace777a610415068c94f1fc0b01c))
+
 ## [2.0.0](https://github.com/vitkuz573/free-id/releases/tag/2.0.0) - 2022-05-05 07:46:15
 
 Second release! 🔥
