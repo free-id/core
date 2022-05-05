@@ -2,23 +2,27 @@
 [![PHP Composer](https://github.com/vitkuz573/free-id/actions/workflows/php.yml/badge.svg)](https://github.com/vitkuz573/free-id/actions/workflows/php.yml)
 
 # Free ID
-## Description
 
 Package to get a free id (for example: in XML)
 
 ## Installation
 
-```composer require vitkuz573/free-id```
+1) Install the package using Composer
+```bash
+composer require vitkuz573/free-id
+```
 
 ## Usage
 
 ```php
 <?php
 
-use Vitkuz573\FreeId;
+use Vitkuz573\FreeId\Xml;
 
-// FreeId\inXml('test.xml', 'node', 'other_id', '10');
-FreeId\inXml('test.xml', 'node');
+$free_id = new Xml();
+
+$free_id('test.xml', 'node', 'other_id', '10');
+$free_id('test.xml', 'node');
 ```
 
 ## Other

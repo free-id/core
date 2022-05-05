@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 namespace Vitkuz573\FreeId;
 
-class InXml extends FreeId
+use Vitkuz573\FreeId\Contracts\File;
+
+class Xml implements File
 {
+    /**
+     * @inheritDoc
+     */
     public function __invoke(string $path, string $element, string $attribute = 'id', int $start_id = 1): int
     {
         $xml = simplexml_load_file($path);
