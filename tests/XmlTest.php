@@ -9,6 +9,7 @@ use Vitkuz573\FreeId\Xml;
 
 final class XmlTest extends TestCase
 {
+    /** @test */
     public function testXml()
     {
         $free_id = new Xml();

@@ -14,6 +14,7 @@ composer require vitkuz573/free-id
 
 ## Usage
 
+### XML
 ```php
 <?php
 
@@ -21,8 +22,20 @@ use Vitkuz573\FreeId\Xml;
 
 $free_id = new Xml();
 
-$free_id('test.xml', 'node', 'other_id', '10');
-$free_id('test.xml', 'node');
+echo $free_id('test.xml', 'node', 'other_id', '10');
+echo $free_id('test.xml', 'node');
+```
+
+### Json
+```php
+<?php
+
+use Vitkuz573\FreeId\Json;
+
+$free_id = new Json();
+
+echo $free_id('test.json', 'nodes', 'other_id', '10');
+echo $free_id('test.json', 'nodes');
 ```
 
 ## Change log
