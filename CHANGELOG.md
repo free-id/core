@@ -7,6 +7,7 @@ Changes unreleased.
 ### Feature
 
 - main:
+  - update update-changelog.yml ([e3caf2c](https://github.com/vitkuz573/free-id/commit/e3caf2ced931fe2688554939894154e350b4c05b))
   - adding changelog updater ([a36ac79](https://github.com/vitkuz573/free-id/commit/a36ac7951fbb07de7d3dac431291c1fc228ed95a))
 
 ### Bug Fixes
