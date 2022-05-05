@@ -22,8 +22,7 @@ class MySql implements Database
         string $column = 'id',
         string $charset = 'utf8',
         int $start_id = 1
-    ): int
-    {
+    ): int {
         $dsn = 'mysql:host=' . $host . ';dbname=' . $db . ';charset=' . $charset;
         $options = [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -46,7 +45,7 @@ class MySql implements Database
 
         foreach ($sth->fetchAll() as $element) {
             foreach ($element as $identifier) {
-                $elements[]  = (int) $identifier;
+                $elements[] = (int) $identifier;
             }
         }
 

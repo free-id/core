@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Vitkuz573\FreeId\Tests;
 
 use PDOException;
@@ -8,12 +10,12 @@ use Vitkuz573\FreeId\Parsers\Database\MySql;
 
 final class MySqlTest extends TestCase
 {
-    /** @test */
-    public function testMySql()
-    {
-        $free_id = new MySql();
-        $this->assertTrue($free_id('127.0.0.1', 'netlab', 'nodes', 'root', '') === 3);
-    }
+//    /** @test */
+//    public function testMySql()
+//    {
+//        $free_id = new MySql();
+//        $this->assertTrue($free_id('127.0.0.1', 'netlab', 'nodes', 'root', '') === 3);
+//    }
 
 //    public function testMySqlFailedConnect()
 //    {

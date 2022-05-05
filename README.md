@@ -14,7 +14,9 @@ composer require vitkuz573/free-id
 
 ## Usage
 
-### XML
+### File
+
+#### XML
 ```php
 <?php
 
@@ -26,7 +28,7 @@ echo $free_id('test.xml', 'node', 'other_id', '10');
 echo $free_id('test.xml', 'node');
 ```
 
-### Json
+#### Json
 ```php
 <?php
 
@@ -36,6 +38,19 @@ $free_id = new Json();
 
 echo $free_id('test.json', 'nodes', 'other_id', '10');
 echo $free_id('test.json', 'nodes');
+```
+
+### Database
+
+#### MySQL
+```php
+<?php
+
+use Vitkuz573\FreeId\Parsers\Database\MySql;
+
+$free_id = new MySql();
+
+echo $free_id('127.0.0.1', 'test', 'items', 'root', 'root');
 ```
 
 ## Change log

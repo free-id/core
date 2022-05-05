@@ -16,8 +16,7 @@ class Json implements File
         string $element,
         string $attribute = 'id',
         int $start_id = 1
-    ): int
-    {
+    ): int {
         $json = json_decode(file_get_contents($path), true);
 
         $id = $start_id;

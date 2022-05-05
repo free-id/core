@@ -16,8 +16,7 @@ class Xml implements File
         string $element,
         string $attribute = 'id',
         int $start_id = 1
-    ): int
-    {
+    ): int {
         $xml = simplexml_load_file($path);
 
         $id = $start_id;
