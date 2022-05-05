@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace Vitkuz573\FreeId\Parsers\File;
 
 use Vitkuz573\FreeId\Contracts\File;
+use Vitkuz573\FreeId\Parsers\Parser as BaseParser;
 
-class Xml implements File
+class Xml extends BaseParser implements File
 {
     /**
      * @inheritDoc
@@ -27,11 +28,6 @@ class Xml implements File
             $elements[] = (int) $element;
         }
 
-        while (true) {
-            if (! in_array($id, $elements)) {
-                return $id;
-            }
-            $id = $id + 1;
-        }
+        return $this->traversing($id, $elements);
     }
 }

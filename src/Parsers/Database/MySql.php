@@ -7,8 +7,9 @@ namespace Vitkuz573\FreeId\Parsers\Database;
 use PDO;
 use PDOException;
 use Vitkuz573\FreeId\Contracts\Database;
+use Vitkuz573\FreeId\Parsers\Parser as BaseParser;
 
-class MySql implements Database
+class MySql extends BaseParser implements Database
 {
     /**
      * @inheritDoc
@@ -49,11 +50,6 @@ class MySql implements Database
             }
         }
 
-        while (true) {
-            if (! in_array($id, $elements)) {
-                return $id;
-            }
-            $id = $id + 1;
-        }
+        return $this->traversing($id, $elements);
     }
 }

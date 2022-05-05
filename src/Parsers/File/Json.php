@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace Vitkuz573\FreeId\Parsers\File;
 
 use Vitkuz573\FreeId\Contracts\File;
+use Vitkuz573\FreeId\Parsers\Parser as BaseParser;
 
-class Json implements File
+class Json extends BaseParser implements File
 {
     /**
      * @inheritDoc
@@ -29,11 +30,6 @@ class Json implements File
             }
         }
 
-        while (true) {
-            if (! in_array($id, $elements)) {
-                return $id;
-            }
-            $id = $id + 1;
-        }
+        return $this->traversing($id, $elements);
     }
 }
