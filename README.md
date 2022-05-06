@@ -8,7 +8,11 @@
 <p align="center">
     <a href="https://php.net" target="_blank"><img src="https://img.shields.io/badge/PHP-8.0+-00ADD8?style=for-the-badge&logo=php" alt="php version"/></a>
     &nbsp;
-    <img src="https://img.shields.io/badge/license-mit-red?style=for-the-badge&logo=none" alt="license"/>
+    <a href="https://packagist.org/packages/vitkuz573/free-id" target="_blank"><img src="https://img.shields.io/packagist/v/vitkuz573/free-id?style=for-the-badge" alt="packagist release"/></a>
+    &nbsp;
+    <a href="https://packagist.org/packages/vitkuz573/free-id" target="_blank"><img src="https://img.shields.io/packagist/dt/vitkuz573/free-id?style=for-the-badge" alt="packagist downloads"/></a>
+    &nbsp;
+    <a href="https://github.com/vitkuz573/free-id/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/license-mit-red?style=for-the-badge&logo=none" alt="license"/></a>
 </p>
 
 ## ⚡️ Quick start
