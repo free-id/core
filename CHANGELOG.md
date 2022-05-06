@@ -12,6 +12,7 @@ Changes unreleased.
 ### Documentation
 
 - main:
+  - adding animations for docs ([9fa6880](https://github.com/vitkuz573/free-id/commit/9fa68800ab06197c3221ec4f88dbb459a74f30a1))
   - update readme.md ([c03e14a](https://github.com/vitkuz573/free-id/commit/c03e14ada733b097710867aa2ae1e6080ae94ced))
   - update documentation ([d00db85](https://github.com/vitkuz573/free-id/commit/d00db85abdccb583df7c2c59ae5c82e5ef854284))
 
