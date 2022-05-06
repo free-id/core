@@ -6,7 +6,7 @@
 <p align="center">Package to get a free id (for example: in XML, Json, etc...)</p>
 
 <p align="center">
-    <a href="https://php.net" target="_blank"><img src="https://img.shields.io/badge/PHP-8.0+-00ADD8?style=for-the-badge&logo=php" alt="php version"/></a>
+    <a href="https://php.net" target="_blank"><img src="https://img.shields.io/badge/PHP-8.1+-00ADD8?style=for-the-badge&logo=php" alt="php version"/></a>
     &nbsp;
     <a href="https://packagist.org/packages/vitkuz573/free-id" target="_blank"><img src="https://img.shields.io/packagist/v/vitkuz573/free-id?style=for-the-badge" alt="packagist release"/></a>
     &nbsp;
