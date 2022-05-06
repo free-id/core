@@ -9,24 +9,36 @@ use Vitkuz573\FreeId\Parsers\Parser as BaseParser;
 
 class Json extends BaseParser implements File
 {
-    /**
-     * @inheritDoc
-     */
-    public function __invoke(
+    private string $path;
+    private string $element;
+    private string $attribute;
+    private int $start_id;
+
+    public function __construct(
         string $path,
         string $element,
         string $attribute = 'id',
         int $start_id = 1
-    ): int {
-        $json = json_decode(file_get_contents($path), true);
+    ) {
+        $this->path = $path;
+        $this->element = $element;
+        $this->attribute = $attribute;
+        $this->start_id = $start_id;
+    }
 
-        $id = $start_id;
+    public function search(): int
+    {
+        $data = json_decode(file_get_contents($this->path), true);
+
+        $id = $this->start_id;
 
         $elements = [];
 
-        foreach ($json[$element] as $element) {
-            foreach ($element as $identifier) {
-                $elements[] = (int) $identifier;
+        foreach ($data[$this->element] as $element) {
+            if (array_key_exists($this->attribute, $element)) {
+                foreach ($element as $identifier) {
+                    $elements[] = (int) $identifier;
+                }
             }
         }
 

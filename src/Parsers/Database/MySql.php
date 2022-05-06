@@ -11,20 +11,35 @@ use Vitkuz573\FreeId\Parsers\Parser as BaseParser;
 
 class MySql extends BaseParser implements Database
 {
-    /**
-     * @inheritDoc
-     */
-    public function __invoke(
+    private string $host;
+    private string $db;
+    private string $table;
+    private array $credentials;
+    private string $column;
+    private string $charset;
+    private int $start_id;
+
+    public function __construct(
         string $host,
         string $db,
         string $table,
-        string $user,
-        string $password,
+        array $credentials,
         string $column = 'id',
         string $charset = 'utf8',
         int $start_id = 1
-    ): int {
-        $dsn = 'mysql:host=' . $host . ';dbname=' . $db . ';charset=' . $charset;
+    ) {
+        $this->host = $host;
+        $this->db = $db;
+        $this->table = $table;
+        $this->credentials = $credentials;
+        $this->column = $column;
+        $this->charset = $charset;
+        $this->start_id = $start_id;
+    }
+
+    public function search(): int
+    {
+        $dsn = 'mysql:host=' . $this->host. ';dbname=' . $this->db . ';charset=' . $this->charset;
         $options = [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
@@ -32,16 +47,16 @@ class MySql extends BaseParser implements Database
         ];
 
         try {
-            $dbh = new PDO($dsn, $user, $password, $options);
+            $dbh = new PDO($dsn, $this->credentials['username'], $this->credentials['password'], $options);
         } catch (PDOException $e) {
             die('Error: ' . $e->getMessage());
         }
 
-        $id = $start_id;
+        $id = $this->start_id;
 
         $elements = [];
 
-        $sth = $dbh->prepare('SELECT ' . $column . ' FROM ' . $table);
+        $sth = $dbh->prepare('SELECT ' . $this->column . ' FROM ' . $this->table);
         $sth->execute();
 
         foreach ($sth->fetchAll() as $element) {
@@ -53,3 +68,6 @@ class MySql extends BaseParser implements Database
         return $this->traversing($id, $elements);
     }
 }
+
+$free_id = new MySql('127.0.0.1', 'netlab', 'nodes', ['username' => 'root', 'password' => '']);
+echo $free_id->parse();

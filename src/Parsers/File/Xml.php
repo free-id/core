@@ -9,25 +9,40 @@ use Vitkuz573\FreeId\Parsers\Parser as BaseParser;
 
 class Xml extends BaseParser implements File
 {
-    /**
-     * @inheritDoc
-     */
-    public function __invoke(
+    private string $path;
+    private string $element;
+    private string $attribute;
+    private int $start_id;
+
+    public function __construct(
         string $path,
         string $element,
         string $attribute = 'id',
         int $start_id = 1
-    ): int {
-        $xml = simplexml_load_file($path);
+    ) {
+        $this->path = $path;
+        $this->element = $element;
+        $this->attribute = $attribute;
+        $this->start_id = $start_id;
+    }
 
-        $id = $start_id;
+    public function search(): int
+    {
+        $data = simplexml_load_file($this->path);
+
+        $id = $this->start_id;
 
         $elements = [];
 
-        foreach ($xml->xpath('//' . $element . '/@' . $attribute) as $element) {
+        foreach ($data->xpath('//' . $this->element . '/@' . $this->attribute) as $element) {
             $elements[] = (int) $element;
         }
 
-        return $this->traversing($id, $elements);
+        while (true) {
+            if (! in_array($id, $elements)) {
+                return $id;
+            }
+            $id += 1;
+        }
     }
 }
