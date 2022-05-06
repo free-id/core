@@ -1,4 +1,5 @@
 <h1 align="center">
+    <img alt="test" src="https://raw.githubusercontent.com/vitkuz573/free-id/main/.github/images/xml_parser.gif"/></br>
   Free ID
 </h1>
 
@@ -58,21 +59,21 @@ $free_id = new MySql();
 echo $free_id('127.0.0.1', 'test', 'items', 'root', 'root');
 ```
 
-## Change log
+## 🆑 Change log
 
 Please see the [changelog](CHANGELOG.md) for more information on what has changed recently.
 
-## Testing
+## 🚩 Testing
 
 ```bash
 composer test
 ```
 
-## Contributing
+## 👋 Contributing
 
 Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details and a todolist.
 
-## Security
+## 🔐 Security
 
 If you discover any security related issues, please email [vitkuz573@gmail.com](mailto:vitkuz573@gmail.com) instead of using the issue tracker.
 
