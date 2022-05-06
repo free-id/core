@@ -20,6 +20,7 @@ Changes unreleased.
 ### Refactor
 
 - main:
+  - update parsers ([9727687](https://github.com/vitkuz573/free-id/commit/9727687cb5758cea344500e456c84f9d538212bc))
   - move traversing method to base parser ([990db9a](https://github.com/vitkuz573/free-id/commit/990db9a191c4c0886ee5d19fcb95079584c1243b))
 
 ## [2.0.0](https://github.com/vitkuz573/free-id/releases/tag/2.0.0) - 2022-05-05 07:46:15
