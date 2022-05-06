@@ -9,6 +9,11 @@ Changes unreleased.
 - main:
   - adding MySQL search functionality ([3f95153](https://github.com/vitkuz573/free-id/commit/3f951535e2e8ace777a610415068c94f1fc0b01c))
 
+### Bug Fixes
+
+- main:
+  - update parsers ([1b18828](https://github.com/vitkuz573/free-id/commit/1b18828146b4ff800118395b14534593f356d867))
+
 ### Documentation
 
 - main:
