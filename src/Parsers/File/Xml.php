@@ -38,11 +38,6 @@ class Xml extends BaseParser implements File
             $elements[] = (int) $element;
         }
 
-        while (true) {
-            if (! in_array($id, $elements)) {
-                return $id;
-            }
-            $id += 1;
-        }
+        return $this->traversing($id, $elements);
     }
 }

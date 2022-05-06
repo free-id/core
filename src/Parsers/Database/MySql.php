@@ -68,6 +68,3 @@ class MySql extends BaseParser implements Database
         return $this->traversing($id, $elements);
     }
 }
-
-$free_id = new MySql('127.0.0.1', 'netlab', 'nodes', ['username' => 'root', 'password' => '']);
-echo $free_id->parse();
