@@ -12,6 +12,7 @@ Changes unreleased.
 ### Bug Fixes
 
 - main:
+  - update php version ([691f050](https://github.com/vitkuz573/free-id/commit/691f0507c0c5ad64efda291f5f500ac781c83c99))
   - update parsers ([1b18828](https://github.com/vitkuz573/free-id/commit/1b18828146b4ff800118395b14534593f356d867))
 
 ### Documentation
