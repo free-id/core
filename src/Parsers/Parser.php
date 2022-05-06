@@ -6,7 +6,7 @@ namespace Vitkuz573\FreeId\Parsers;
 
 class Parser
 {
-    public function traversing(int $id, array $elements): int
+    protected function traversing(int $id, array $elements): int
     {
         while (true) {
             if (! in_array($id, $elements)) {
