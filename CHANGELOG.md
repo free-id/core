@@ -10,6 +10,11 @@ Changes unreleased.
   - the scope of the traversing function has been changed ([1455e2c](https://github.com/vitkuz573/free-id/commit/1455e2c9abf719d31842eb7f4e18402130b24116))
   - update tests workflow ([c0bbfdc](https://github.com/vitkuz573/free-id/commit/c0bbfdc636cf2c2a6d9fb00fcfc798505df0591d))
 
+### Refactor
+
+- main:
+  - code refactoring ([11b81de](https://github.com/vitkuz573/free-id/commit/11b81ded0a3c7e78242282a337933cb791f9db15))
+
 ## [2.1.0](https://github.com/vitkuz573/free-id/releases/tag/2.1.0) - 2022-05-06 05:56:55
 
 **Full Changelog**: https://github.com/vitkuz573/free-id/compare/2.0.0...2.1.0
@@ -17,7 +22,7 @@ Changes unreleased.
 ### Feature
 
 - main:
-  - adding MySQL find functionality ([3f95153](https://github.com/vitkuz573/free-id/commit/3f951535e2e8ace777a610415068c94f1fc0b01c))
+  - adding MySQL search functionality ([3f95153](https://github.com/vitkuz573/free-id/commit/3f951535e2e8ace777a610415068c94f1fc0b01c))
 
 ### Bug Fixes
 
@@ -48,7 +53,7 @@ Second release! 🔥
 ### Feature
 
 - main:
-  - adding json find functionality ([9e83ef6](https://github.com/vitkuz573/free-id/commit/9e83ef6efb051e9ceb74b6954b84b8e0a56e77de))
+  - adding json search functionality ([9e83ef6](https://github.com/vitkuz573/free-id/commit/9e83ef6efb051e9ceb74b6954b84b8e0a56e77de))
 
 ### Documentation
 
