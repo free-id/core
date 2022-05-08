@@ -12,6 +12,7 @@ Changes unreleased.
 ### Bug Fixes
 
 - main:
+  - mini fixes ([c4dfd6b](https://github.com/vitkuz573/free-id/commit/c4dfd6b4f922496d5e783744d077ce60d3c1d7c6))
   - the scope of the traversing function has been changed ([1455e2c](https://github.com/vitkuz573/free-id/commit/1455e2c9abf719d31842eb7f4e18402130b24116))
   - update tests workflow ([c0bbfdc](https://github.com/vitkuz573/free-id/commit/c0bbfdc636cf2c2a6d9fb00fcfc798505df0591d))
 
