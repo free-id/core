@@ -13,6 +13,6 @@ final class XmlTest extends TestCase
     public function testXml()
     {
         $free_id = new Xml(__DIR__.'/files/test.xml', 'node');
-        $this->assertTrue($free_id->search() === 3);
+        $this->assertTrue($free_id->find() === 3);
     }
 }

@@ -13,6 +13,6 @@ final class JsonTest extends TestCase
     public function testJson()
     {
         $free_id = new Json(__DIR__.'/files/test.json', 'nodes');
-        $this->assertTrue($free_id->search() === 3);
+        $this->assertTrue($free_id->find() === 3);
     }
 }

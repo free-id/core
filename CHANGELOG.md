@@ -17,7 +17,7 @@ Changes unreleased.
 ### Feature
 
 - main:
-  - adding MySQL search functionality ([3f95153](https://github.com/vitkuz573/free-id/commit/3f951535e2e8ace777a610415068c94f1fc0b01c))
+  - adding MySQL find functionality ([3f95153](https://github.com/vitkuz573/free-id/commit/3f951535e2e8ace777a610415068c94f1fc0b01c))
 
 ### Bug Fixes
 
@@ -48,7 +48,7 @@ Second release! 🔥
 ### Feature
 
 - main:
-  - adding json search functionality ([9e83ef6](https://github.com/vitkuz573/free-id/commit/9e83ef6efb051e9ceb74b6954b84b8e0a56e77de))
+  - adding json find functionality ([9e83ef6](https://github.com/vitkuz573/free-id/commit/9e83ef6efb051e9ceb74b6954b84b8e0a56e77de))
 
 ### Documentation
 

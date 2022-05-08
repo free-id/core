@@ -26,18 +26,10 @@ class Xml extends BaseParser implements File
         $this->start_id = $start_id;
     }
 
-    public function search(): int
+    public function find(): int
     {
-        $data = simplexml_load_file($this->path);
-
         $id = $this->start_id;
 
-        $elements = [];
-
-        foreach ($data->xpath('//' . $this->element . '/@' . $this->attribute) as $element) {
-            $elements[] = (int) $element;
-        }
-
-        return $this->traversing($id, $elements);
+        return $this->enumerate(simplexml_load_file($this->path)->xpath('//' . $this->element . '/@' . $this->attribute), $id);
     }
 }

@@ -37,7 +37,7 @@ class MySql extends BaseParser implements Database
         $this->start_id = $start_id;
     }
 
-    public function search(): int
+    public function find(): int
     {
         $dsn = 'mysql:host=' . $this->host. ';dbname=' . $this->db . ';charset=' . $this->charset;
         $options = [
@@ -54,17 +54,15 @@ class MySql extends BaseParser implements Database
 
         $id = $this->start_id;
 
-        $elements = [];
+        $data = [];
 
         $sth = $dbh->prepare('SELECT ' . $this->column . ' FROM ' . $this->table);
         $sth->execute();
 
         foreach ($sth->fetchAll() as $element) {
-            foreach ($element as $identifier) {
-                $elements[] = (int) $identifier;
-            }
+            $data[] = $element[$this->column];
         }
 
-        return $this->traversing($id, $elements);
+        return $this->enumerate($data, $id);
     }
 }

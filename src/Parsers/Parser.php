@@ -6,10 +6,21 @@ namespace Vitkuz573\FreeId\Parsers;
 
 class Parser
 {
-    protected function traversing(int $id, array $elements): int
+    protected array $elements;
+
+    public function __construct($elements)
     {
+        $this->elements = $elements;
+    }
+
+    protected function enumerate(array $data, int $id): int
+    {
+        foreach ($data as $element) {
+            $this->elements[] = (int) $element;
+        }
+
         while (true) {
-            if (! in_array($id, $elements)) {
+            if (! in_array($id, $this->elements)) {
                 return $id;
             }
             $id += 1;

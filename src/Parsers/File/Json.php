@@ -26,22 +26,18 @@ class Json extends BaseParser implements File
         $this->start_id = $start_id;
     }
 
-    public function search(): int
+    public function find(): int
     {
-        $data = json_decode(file_get_contents($this->path), true);
-
         $id = $this->start_id;
 
-        $elements = [];
+        $data = [];
 
-        foreach ($data[$this->element] as $element) {
+        foreach (json_decode(file_get_contents($this->path), true)[$this->element] as $element) {
             if (array_key_exists($this->attribute, $element)) {
-                foreach ($element as $identifier) {
-                    $elements[] = (int) $identifier;
-                }
+                $data[] = $element[$this->attribute];
             }
         }
 
-        return $this->traversing($id, $elements);
+        return $this->enumerate($data, $id);
     }
 }

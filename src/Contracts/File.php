@@ -13,5 +13,5 @@ interface File
         int $start_id = 1
     );
 
-    public function search(): int;
+    public function find(): int;
 }
