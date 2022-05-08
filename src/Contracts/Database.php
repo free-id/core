@@ -13,7 +13,8 @@ interface Database
         array $credentials,
         string $column = 'id',
         string $charset = 'utf8',
-        int $start_id = 1
+        int $id = 1,
+        array $data = [],
     );
 
     public function find(): int;
