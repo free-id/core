@@ -1,6 +1,8 @@
 <?php
 
-include "vendor/autoload.php";
+declare(strict_types=1);
+
+include __DIR__ . '/../vendor/autoload.php';
 
 use Vitkuz573\FreeId\Parsers\Database\MySql;
 use Vitkuz573\FreeId\Parsers\File\Json;

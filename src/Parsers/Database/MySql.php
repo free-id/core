@@ -7,7 +7,6 @@ namespace Vitkuz573\FreeId\Parsers\Database;
 use PDO;
 use PDOException;
 use Vitkuz573\FreeId\Contracts\Database;
-use Vitkuz573\FreeId\Exceptions\ElementsNotFoundException;
 use Vitkuz573\FreeId\Parsers\Parser as BaseParser;
 
 class MySql extends BaseParser implements Database

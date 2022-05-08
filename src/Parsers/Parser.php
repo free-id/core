@@ -26,8 +26,7 @@ class Parser
                 throw new ElementsNotFoundException();
             }
         } catch (ElementsNotFoundException $e) {
-            echo $e->getMessage();
-            die();
+            die($e->getMessage());
         }
 
         while (true) {
