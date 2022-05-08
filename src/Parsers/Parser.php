@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Vitkuz573\FreeId\Parsers;
 
+use Vitkuz573\FreeId\Exceptions\ElementsNotFoundException;
+
 class Parser
 {
     protected array $elements;
@@ -17,6 +19,15 @@ class Parser
     {
         foreach ($data as $element) {
             $this->elements[] = (int) $element;
+        }
+
+        try {
+            if (empty($this->elements)) {
+                throw new ElementsNotFoundException();
+            }
+        } catch (ElementsNotFoundException $e) {
+            echo $e->getMessage();
+            die();
         }
 
         while (true) {
