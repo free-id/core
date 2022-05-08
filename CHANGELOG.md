@@ -4,6 +4,11 @@
 
 Changes unreleased.
 
+### Feature
+
+- main:
+  - adding ElementsNotFoundException ([9364f5f](https://github.com/vitkuz573/free-id/commit/9364f5f601245d5923f64e659b2bb66a62ed7e23))
+
 ### Bug Fixes
 
 - main:
@@ -13,6 +18,7 @@ Changes unreleased.
 ### Refactor
 
 - main:
+  - code refactoring ([056ea4a](https://github.com/vitkuz573/free-id/commit/056ea4a981028f98ee0d1e76d2e2946d8366bd3a))
   - code refactoring ([11b81de](https://github.com/vitkuz573/free-id/commit/11b81ded0a3c7e78242282a337933cb791f9db15))
 
 ## [2.1.0](https://github.com/vitkuz573/free-id/releases/tag/2.1.0) - 2022-05-06 05:56:55
