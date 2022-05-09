@@ -10,7 +10,7 @@ interface SqliteDatabase
         string $path,
         string $table,
         string $column = 'id',
-        int $id = 1,
+        int $start_id = 1,
         array $data = [],
     );
 

@@ -21,13 +21,13 @@ class Sqlite extends BaseParser implements SqliteDatabase
         string $path,
         string $table,
         string $column = 'id',
-        int $id = 1,
+        int $start_id = 1,
         array $data = []
     ) {
         $this->path = $path;
         $this->table = $table;
         $this->column = $column;
-        $this->id = $id;
+        $this->id = $start_id;
         $this->data = $data;
     }
 

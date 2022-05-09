@@ -27,7 +27,7 @@ class MySql extends BaseParser implements SqlDatabase
         array  $credentials,
         string $column = 'id',
         string $charset = 'utf8',
-        int    $id = 1,
+        int    $start_id = 1,
         array  $data = [],
     ) {
         $this->host = $host;
@@ -36,7 +36,7 @@ class MySql extends BaseParser implements SqlDatabase
         $this->credentials = $credentials;
         $this->column = $column;
         $this->charset = $charset;
-        $this->id = $id;
+        $this->id = $start_id;
         $this->data = $data;
     }
 

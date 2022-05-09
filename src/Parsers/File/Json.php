@@ -10,28 +10,28 @@ use Vitkuz573\FreeId\Parsers\Parser as BaseParser;
 class Json extends BaseParser implements File
 {
     private string $path;
-    private string $element;
+    private string $parent_element;
     private string $attribute;
     private int $id;
     private array $data;
 
     public function __construct(
         string $path,
-        string $element,
+        string $parent_element,
         string $attribute = 'id',
-        int $id = 1,
+        int $start_id = 1,
         array $data = [],
     ) {
         $this->path = $path;
-        $this->element = $element;
+        $this->parent_element = $parent_element;
         $this->attribute = $attribute;
-        $this->id = $id;
+        $this->id = $start_id;
         $this->data = $data;
     }
 
     public function find(): int
     {
-        foreach (json_decode(file_get_contents($this->path), true)[$this->element] as $element) {
+        foreach (json_decode(file_get_contents($this->path), true)[$this->parent_element] as $element) {
             if (array_key_exists($this->attribute, $element)) {
                 $this->data[] = $element[$this->attribute];
             }

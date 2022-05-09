@@ -10,7 +10,7 @@ interface File
         string $path,
         string $element,
         string $attribute = 'id',
-        int $id = 1,
+        int $start_id = 1,
         array $data = [],
     );
 
