@@ -66,6 +66,16 @@ $free_id = new MySql('127.0.0.1', 'test', 'items', ['username' => 'root', 'passw
 $free_id->find();
 ```
 
+#### SQLite
+```php
+<?php
+
+use Vitkuz573\FreeId\Parsers\Database\Sqlite;
+
+$free_id = new Sqlite('db.sqlite3', 'items');
+$free_id->find();
+```
+
 ## 🆑 Change log
 
 Please see the [changelog](CHANGELOG.md) for more information on what has changed recently.
@@ -93,7 +103,7 @@ If you discover any security related issues, please email [vitkuz573@gmail.com](
 
 `Free ID` is free and open-source software licensed under the [MIT](https://github.com/vitkuz573/free-id/blob/main/LICENSE).
 
-## Other
+## 🗃️ Other
 
 My other packages can be found in the following [repository](https://github.com/vitkuz573/composer_packages)
 
