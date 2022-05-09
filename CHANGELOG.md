@@ -7,6 +7,7 @@ Changes unreleased.
 ### Documentation
 
 - main:
+  - update readme ([f278308](https://github.com/vitkuz573/free-id/commit/f2783087987e0f2b7d35bbaece30729c2d212ae8))
   - update readme ([43c8fb2](https://github.com/vitkuz573/free-id/commit/43c8fb22a254aaaf2a81f8521d69f82fc7d74b02))
 
 ## [2.2.4](https://github.com/vitkuz573/free-id/releases/tag/2.2.4) - 2022-05-09 11:32:32
