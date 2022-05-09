@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## Unreleased
+
+Changes unreleased.
+
+### Documentation
+
+- main:
+  - update readme ([43c8fb2](https://github.com/vitkuz573/free-id/commit/43c8fb22a254aaaf2a81f8521d69f82fc7d74b02))
+
 ## [2.2.4](https://github.com/vitkuz573/free-id/releases/tag/2.2.4) - 2022-05-09 11:32:32
 
 **Full Changelog**: https://github.com/vitkuz573/free-id/compare/2.2.3...2.2.4
