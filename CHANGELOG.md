@@ -9,6 +9,11 @@ Changes unreleased.
 - main:
   - adding sqlite parser ([0127ac5](https://github.com/vitkuz573/free-id/commit/0127ac580d9b4c83c819447b14d5e5af8d58077b))
 
+### Bug Fixes
+
+- main:
+  - update examples ([5439bdf](https://github.com/vitkuz573/free-id/commit/5439bdf44fafc31b29f2d246f5c10382951920eb))
+
 ### Refactor
 
 - main:
