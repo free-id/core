@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Vitkuz573\FreeId\Contracts;
 
-interface NoSqlDatabase
+interface SqliteDatabase
 {
     public function __construct(
         string $path,

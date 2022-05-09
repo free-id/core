@@ -6,10 +6,10 @@ namespace Vitkuz573\FreeId\Parsers\Database;
 
 use PDO;
 use PDOException;
-use Vitkuz573\FreeId\Contracts\NoSqlDatabase;
+use Vitkuz573\FreeId\Contracts\SqliteDatabase;
 use Vitkuz573\FreeId\Parsers\Parser as BaseParser;
 
-class Sqlite extends BaseParser implements NoSqlDatabase
+class Sqlite extends BaseParser implements SqliteDatabase
 {
     private string $path;
     private string $table;
