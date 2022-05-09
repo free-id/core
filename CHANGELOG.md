@@ -12,6 +12,7 @@ Changes unreleased.
 ### Refactor
 
 - main:
+  - update database parsers ([471c54d](https://github.com/vitkuz573/free-id/commit/471c54d8178c12fd9a290b5def60d951e31b3c4e))
   - update database parsers ([6725dbe](https://github.com/vitkuz573/free-id/commit/6725dbe1b7234df9ceaf4b6f0319feef1a2d4340))
 
 ## [2.2.1](https://github.com/vitkuz573/free-id/releases/tag/2.2.1) - 2022-05-09 02:00:10
