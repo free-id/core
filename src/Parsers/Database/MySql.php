@@ -55,11 +55,7 @@ class MySql extends BaseParser implements SqlDatabase
             die('Error: ' . $e->getMessage());
         }
 
-        $sth = $this->select($dbh, $this->table, $this->column);
-
-        foreach ($sth->fetchAll() as $element) {
-            $this->data[] = $element[$this->column];
-        }
+        $this->data = $this->select($dbh, $this->table, $this->column);
 
         return $this->enumerate($this->data, $this->id);
     }

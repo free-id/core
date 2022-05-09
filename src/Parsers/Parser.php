@@ -6,7 +6,6 @@ namespace Vitkuz573\FreeId\Parsers;
 
 use PDO;
 use PDOException;
-use PDOStatement;
 use Vitkuz573\FreeId\Exceptions\ElementsNotFoundException;
 
 class Parser
@@ -18,7 +17,7 @@ class Parser
         $this->elements = $elements;
     }
 
-    protected function select(PDO $dbh, string $table, string $column): PDOStatement
+    protected function select(PDO $dbh, string $table, string $column, array $data = []): array
     {
         try {
             $sth = $dbh->prepare('SELECT ' . $column . ' FROM ' . $table);
@@ -28,7 +27,11 @@ class Parser
 
         $sth->execute();
 
-        return $sth;
+        foreach ($sth->fetchAll() as $element) {
+            $data[] = $element[$column];
+        }
+
+        return $data;
     }
 
     protected function enumerate(array $data, int $id): int
