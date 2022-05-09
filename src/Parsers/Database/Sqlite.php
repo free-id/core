@@ -33,17 +33,13 @@ class Sqlite extends BaseParser implements SqliteDatabase
 
     public function find(): int
     {
-        $dsn = 'sqlite:' . $this->path;
-        $options = [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-            PDO::ATTR_EMULATE_PREPARES => false,
-        ];
-
         try {
-            $dbh = new PDO($dsn, options: $options);
+            $dbh = new PDO(
+                'sqlite:' . $this->path,
+                options: $this->getPdoOptions(),
+            );
         } catch (PDOException $e) {
-            die('Error: ' . $e->getMessage());
+            die($e->getMessage());
         }
 
         $this->data = $this->select($dbh, $this->table, $this->column);

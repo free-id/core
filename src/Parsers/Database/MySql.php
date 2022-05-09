@@ -42,17 +42,15 @@ class MySql extends BaseParser implements SqlDatabase
 
     public function find(): int
     {
-        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->db . ';charset=' . $this->charset;
-        $options = [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-            PDO::ATTR_EMULATE_PREPARES => false,
-        ];
-
         try {
-            $dbh = new PDO($dsn, $this->credentials['username'], $this->credentials['password'], $options);
+            $dbh = new PDO(
+                'mysql:host=' . $this->host . ';dbname=' . $this->db . ';charset=' . $this->charset,
+                $this->credentials['username'],
+                $this->credentials['password'],
+                $this->getPdoOptions(),
+            );
         } catch (PDOException $e) {
-            die('Error: ' . $e->getMessage());
+            die($e->getMessage());
         }
 
         $this->data = $this->select($dbh, $this->table, $this->column);
