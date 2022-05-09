@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Vitkuz573\FreeId\Parsers;
 
+use PDO;
+use PDOException;
+use PDOStatement;
 use Vitkuz573\FreeId\Exceptions\ElementsNotFoundException;
 
 class Parser
@@ -13,6 +16,19 @@ class Parser
     public function __construct($elements)
     {
         $this->elements = $elements;
+    }
+
+    protected function select(PDO $dbh, string $table, string $column): PDOStatement
+    {
+        try {
+            $sth = $dbh->prepare('SELECT ' . $column . ' FROM ' . $table);
+        } catch (PDOException $e) {
+            die('Error: ' . $e->getMessage());
+        }
+
+        $sth->execute();
+
+        return $sth;
     }
 
     protected function enumerate(array $data, int $id): int

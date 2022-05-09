@@ -55,13 +55,7 @@ class MySql extends BaseParser implements SqlDatabase
             die('Error: ' . $e->getMessage());
         }
 
-        try {
-            $sth = $dbh->prepare('SELECT ' . $this->column . ' FROM ' . $this->table);
-        } catch (PDOException $e) {
-            die('Error: ' . $e->getMessage());
-        }
-
-        $sth->execute();
+        $sth = $this->select($dbh, $this->table, $this->column);
 
         foreach ($sth->fetchAll() as $element) {
             $this->data[] = $element[$this->column];
