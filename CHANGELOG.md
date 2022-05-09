@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## Unreleased
+
+Changes unreleased.
+
+### Bug Fixes
+
+- main:
+  - adding exception throw to mysql parser ([116e2d7](https://github.com/vitkuz573/free-id/commit/116e2d7dc242f4ee93f86ba8b628d4c402b079b0))
+
 ## [2.2.0](https://github.com/vitkuz573/free-id/releases/tag/2.2.0) - 2022-05-08 17:54:25
 
 **Full Changelog**: https://github.com/vitkuz573/free-id/compare/2.1.0...2.2.0
