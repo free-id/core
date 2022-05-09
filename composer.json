@@ -1,6 +1,6 @@
 {
     "name": "vitkuz573/free-id",
-    "description": "Package to get a free id (for example: in XML)",
+    "description": "Package for obtaining a free identifier in files, databases, etc.",
     "keywords": [
         "free",
         "id",

@@ -3,7 +3,8 @@
   Free ID
 </h1>
 
-<p align="center">Package to get a free id (for example: in XML, Json, etc...)</p>
+<p align="center">Have you often had to get a free ID in your project? Now this action is much easier with this package!</p>
+<p align="center">This package is designed for easy and flexible getting free ID in files, databases, etc.</p>
 
 <p align="center">
     <a href="https://php.net" target="_blank"><img src="https://img.shields.io/badge/PHP-8.1+-00ADD8?style=for-the-badge&logo=php" alt="php version"/></a>
