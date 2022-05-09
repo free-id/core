@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## Unreleased
+
+Changes unreleased.
+
+### Feature
+
+- main:
+  - adding sqlite parser ([0127ac5](https://github.com/vitkuz573/free-id/commit/0127ac580d9b4c83c819447b14d5e5af8d58077b))
+
 ## [2.2.1](https://github.com/vitkuz573/free-id/releases/tag/2.2.1) - 2022-05-09 02:00:10
 
 **Full Changelog**: https://github.com/vitkuz573/free-id/compare/2.2.0...2.2.1
