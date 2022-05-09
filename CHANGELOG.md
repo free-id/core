@@ -1,8 +1,8 @@
 # CHANGELOG
 
-## [2.2.2](https://github.com/vitkuz573/free-id/releases/tag/2.2.2) - 2022-05-09 05:06:40
+## Unreleased
 
-**Full Changelog**: https://github.com/vitkuz573/free-id/compare/2.2.1...2.2.2
+Changes unreleased.
 
 ### Feature
 
@@ -12,6 +12,7 @@
 ### Bug Fixes
 
 - main:
+  - rename contract ([fa2a10c](https://github.com/vitkuz573/free-id/commit/fa2a10cc2183f66e7bab33fe31af067568a06067))
   - update examples ([5439bdf](https://github.com/vitkuz573/free-id/commit/5439bdf44fafc31b29f2d246f5c10382951920eb))
 
 ### Refactor
