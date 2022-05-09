@@ -9,6 +9,11 @@ Changes unreleased.
 - main:
   - adding sqlite parser ([0127ac5](https://github.com/vitkuz573/free-id/commit/0127ac580d9b4c83c819447b14d5e5af8d58077b))
 
+### Refactor
+
+- main:
+  - update database parsers ([6725dbe](https://github.com/vitkuz573/free-id/commit/6725dbe1b7234df9ceaf4b6f0319feef1a2d4340))
+
 ## [2.2.1](https://github.com/vitkuz573/free-id/releases/tag/2.2.1) - 2022-05-09 02:00:10
 
 **Full Changelog**: https://github.com/vitkuz573/free-id/compare/2.2.0...2.2.1
