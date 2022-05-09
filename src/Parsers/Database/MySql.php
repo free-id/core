@@ -55,7 +55,12 @@ class MySql extends BaseParser implements Database
             die('Error: ' . $e->getMessage());
         }
 
-        $sth = $dbh->prepare('SELECT ' . $this->column . ' FROM ' . $this->table);
+        try {
+            $sth = $dbh->prepare('SELECT ' . $this->column . ' FROM ' . $this->table);
+        } catch (PDOException $e) {
+            die('Error: ' . $e->getMessage());
+        }
+
         $sth->execute();
 
         foreach ($sth->fetchAll() as $element) {
