@@ -5,6 +5,7 @@ declare(strict_types=1);
 include __DIR__ . '/../vendor/autoload.php';
 
 use Vitkuz573\FreeId\Parsers\Database\MySql;
+use Vitkuz573\FreeId\Parsers\Database\Sqlite;
 use Vitkuz573\FreeId\Parsers\File\Json;
 use Vitkuz573\FreeId\Parsers\File\Xml;
 
@@ -21,3 +22,6 @@ echo 'Free ID (JSON): ' . $json->find() . PHP_EOL;
 
 $mysql = new MySql(HOST, DATABASE, TABLE, CREDENTIALS);
 echo 'Free ID (MySQL): ' . $mysql->find() . PHP_EOL;
+
+$sqlite = new Sqlite('test.sqlite3', 'items', 'identifier');
+echo 'Free ID (SQLite): ' . $sqlite->find() . PHP_EOL;
