@@ -67,6 +67,16 @@ $free_id = new MySql('127.0.0.1', 'test', 'items', ['username' => 'root', 'passw
 echo $free_id->find();
 ```
 
+#### PostgreSQL
+```php
+<?php
+
+use Vitkuz573\FreeId\Parsers\Database\PgSql;
+
+$free_id = new PgSql('127.0.0.1', 'test', 'items', ['username' => 'postgres', 'password' => 'postgres']);
+echo $free_id->find();
+```
+
 #### SQLite
 ```php
 <?php
