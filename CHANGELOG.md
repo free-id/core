@@ -4,6 +4,11 @@
 
 Changes unreleased.
 
+### Feature
+
+- main:
+  - adding pgsql parser ([e0d8da8](https://github.com/vitkuz573/free-id/commit/e0d8da8bf71c3dfbca9e2a9b4fc76dc6f11227f4))
+
 ### Bug Fixes
 
 - main:
