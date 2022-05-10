@@ -11,7 +11,6 @@ interface File
         string $element,
         string $attribute = 'id',
         int $start_id = 1,
-        array $data = [],
     );
 
     public function find(): int;

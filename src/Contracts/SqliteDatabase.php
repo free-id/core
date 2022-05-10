@@ -11,7 +11,6 @@ interface SqliteDatabase
         string $table,
         string $column = 'id',
         int $start_id = 1,
-        array $data = [],
     );
 
     public function find(): int;

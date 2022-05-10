@@ -15,7 +15,6 @@ interface SqlDatabase
         string $column = 'id',
         string $charset = 'utf8',
         int $start_id = 1,
-        array $data = [],
     );
 
     public function find(): int;

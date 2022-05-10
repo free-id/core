@@ -10,10 +10,12 @@ use Vitkuz573\FreeId\Exceptions\ElementsNotFoundException;
 
 class Parser
 {
+    protected array $data;
     protected array $elements;
 
-    public function __construct($elements)
+    public function __construct($data, $elements)
     {
+        $this->data = $data;
         $this->elements = $elements;
     }
 
@@ -26,15 +28,10 @@ class Parser
         ];
     }
 
-    protected function getPdoData(string $dsn, array $credentials, string $table, string $column, array $data = []): array
+    protected function getPdoData(string $dsn, array $credentials, string $table, string $column): array
     {
         try {
             $dbh = new PDO($dsn, $credentials['username'], $credentials['password'], $this->getPdoOptions());
-        } catch (PDOException $e) {
-            die($e->getMessage());
-        }
-
-        try {
             $sth = $dbh->prepare('SELECT ' . $column . ' FROM ' . $table);
         } catch (PDOException $e) {
             die($e->getMessage());
@@ -43,10 +40,10 @@ class Parser
         $sth->execute();
 
         foreach ($sth->fetchAll() as $element) {
-            $data[] = $element[$column];
+            $this->data[] = $element[$column];
         }
 
-        return $data;
+        return $this->data;
     }
 
     protected function enumerate(array $data, int $id): int

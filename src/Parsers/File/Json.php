@@ -13,20 +13,22 @@ class Json extends BaseParser implements File
     private string $parent_element;
     private string $attribute;
     private int $id;
-    private array $data;
+    protected array $data;
+    protected array $elements;
 
     public function __construct(
         string $path,
         string $parent_element,
         string $attribute = 'id',
         int $start_id = 1,
-        array $data = [],
     ) {
         $this->path = $path;
         $this->parent_element = $parent_element;
         $this->attribute = $attribute;
         $this->id = $start_id;
-        $this->data = $data;
+        $this->data = [];
+        $this->elements = [];
+        parent::__construct($this->data, $this->elements);
     }
 
     public function find(): int
