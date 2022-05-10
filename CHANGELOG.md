@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## Unreleased
+
+Changes unreleased.
+
+### Refactor
+
+- main:
+  - code refactoring ([cd74b9e](https://github.com/vitkuz573/free-id/commit/cd74b9edfd035181018735aa396efb58046317f7))
+
 ## [2.2.6](https://github.com/vitkuz573/free-id/releases/tag/2.2.6) - 2022-05-10 14:56:22
 
 **Full Changelog**: https://github.com/vitkuz573/free-id/compare/2.2.5...2.2.6
