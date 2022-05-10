@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Vitkuz573\FreeId\Parsers\Database;
 
-use PDO;
-use PDOException;
 use Vitkuz573\FreeId\Contracts\SqlDatabase;
 use Vitkuz573\FreeId\Parsers\Parser as BaseParser;
 
@@ -42,18 +40,12 @@ class MySql extends BaseParser implements SqlDatabase
 
     public function find(): int
     {
-        try {
-            $dbh = new PDO(
-                'mysql:host=' . $this->host . ';dbname=' . $this->db . ';charset=' . $this->charset,
-                $this->credentials['username'],
-                $this->credentials['password'],
-                $this->getPdoOptions(),
-            );
-        } catch (PDOException $e) {
-            die($e->getMessage());
-        }
-
-        $this->data = $this->select($dbh, $this->table, $this->column);
+        $this->data = $this->getPdoData(
+            'mysql:host=' . $this->host . ';dbname=' . $this->db . ';charset=' . $this->charset,
+            $this->credentials,
+            $this->table,
+            $this->column
+        );
 
         return $this->enumerate($this->data, $this->id);
     }

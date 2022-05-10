@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Vitkuz573\FreeId\Parsers\Database;
 
-use PDO;
-use PDOException;
 use Vitkuz573\FreeId\Contracts\SqliteDatabase;
 use Vitkuz573\FreeId\Parsers\Parser as BaseParser;
 
@@ -33,18 +31,12 @@ class Sqlite extends BaseParser implements SqliteDatabase
 
     public function find(): int
     {
-        try {
-            $dbh = new PDO(
-                'sqlite:' . $this->path,
-                null,
-                null,
-                $this->getPdoOptions(),
-            );
-        } catch (PDOException $e) {
-            die($e->getMessage());
-        }
-
-        $this->data = $this->select($dbh, $this->table, $this->column);
+        $this->data = $this->getPdoData(
+            'sqlite:' . $this->path,
+            ['username' => null, 'password' => null],
+            $this->table,
+            $this->column
+        );
 
         return $this->enumerate($this->data, $this->id);
     }

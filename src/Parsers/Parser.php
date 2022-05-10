@@ -26,12 +26,18 @@ class Parser
         ];
     }
 
-    protected function select(PDO $dbh, string $table, string $column, array $data = []): array
+    protected function getPdoData(string $dsn, array $credentials, string $table, string $column, array $data = []): array
     {
+        try {
+            $dbh = new PDO($dsn, $credentials['username'], $credentials['password'], $this->getPdoOptions());
+        } catch (PDOException $e) {
+            die($e->getMessage());
+        }
+
         try {
             $sth = $dbh->prepare('SELECT ' . $column . ' FROM ' . $table);
         } catch (PDOException $e) {
-            die('Error: ' . $e->getMessage());
+            die($e->getMessage());
         }
 
         $sth->execute();
