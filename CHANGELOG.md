@@ -1,8 +1,8 @@
 # CHANGELOG
 
-## Unreleased
+## [2.2.6](https://github.com/vitkuz573/free-id/releases/tag/2.2.6) - 2022-05-10 14:56:22
 
-Changes unreleased.
+**Full Changelog**: https://github.com/vitkuz573/free-id/compare/2.2.5...2.2.6
 
 ### Feature
 
