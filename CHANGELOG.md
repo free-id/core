@@ -7,6 +7,7 @@ Changes unreleased.
 ### Feature
 
 - main:
+  - added possibility to specify the port for mysql and pgsql parsers ([e82d119](https://github.com/vitkuz573/free-id/commit/e82d119f973afef94516e03877ef4b79c2643ca7))
   - adding pgsql parser ([e0d8da8](https://github.com/vitkuz573/free-id/commit/e0d8da8bf71c3dfbca9e2a9b4fc76dc6f11227f4))
 
 ### Bug Fixes
