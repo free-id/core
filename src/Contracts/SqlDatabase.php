@@ -8,6 +8,7 @@ interface SqlDatabase
 {
     public function __construct(
         string $host,
+        string $port,
         string $db,
         string $table,
         array $credentials,
