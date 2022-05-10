@@ -17,8 +17,6 @@ class MySql extends BaseParser implements SqlDatabase
     private string $column;
     private string $charset;
     private int $id;
-    protected array $data;
-    protected array $elements;
 
     public function __construct(
         string $host,
@@ -30,6 +28,7 @@ class MySql extends BaseParser implements SqlDatabase
         string $charset = 'utf8',
         int    $start_id = 1,
     ) {
+        parent::__construct([], []);
         $this->host = $host;
         $this->port = $port;
         $this->db = $db;
@@ -38,9 +37,6 @@ class MySql extends BaseParser implements SqlDatabase
         $this->column = $column;
         $this->charset = $charset;
         $this->id = $start_id;
-        $this->data = [];
-        $this->elements = [];
-        parent::__construct($this->data, $this->elements);
     }
 
     public function find(): int

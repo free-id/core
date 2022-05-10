@@ -13,8 +13,6 @@ class Sqlite extends BaseParser implements SqliteDatabase
     private string $table;
     private string $column;
     private int $id;
-    protected array $data;
-    protected array $elements;
 
     public function __construct(
         string $path,
@@ -22,13 +20,11 @@ class Sqlite extends BaseParser implements SqliteDatabase
         string $column = 'id',
         int $start_id = 1,
     ) {
+        parent::__construct([], []);
         $this->path = $path;
         $this->table = $table;
         $this->column = $column;
         $this->id = $start_id;
-        $this->data = [];
-        $this->elements = [];
-        parent::__construct($this->data, $this->elements);
     }
 
     public function find(): int

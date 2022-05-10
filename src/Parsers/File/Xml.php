@@ -13,8 +13,6 @@ class Xml extends BaseParser implements File
     private string $child_element;
     private string $attribute;
     private int $id;
-    protected array $data;
-    protected array $elements;
 
     public function __construct(
         string $path,
@@ -22,13 +20,11 @@ class Xml extends BaseParser implements File
         string $attribute = 'id',
         int $start_id = 1,
     ) {
+        parent::__construct([], []);
         $this->path = $path;
         $this->child_element = $child_element;
         $this->attribute = $attribute;
         $this->id = $start_id;
-        $this->data = [];
-        $this->elements = [];
-        parent::__construct($this->data, $this->elements);
     }
 
     public function find(): int
