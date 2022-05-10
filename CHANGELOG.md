@@ -7,6 +7,7 @@ Changes unreleased.
 ### Refactor
 
 - main:
+  - __construct method update ([c4c73a5](https://github.com/vitkuz573/free-id/commit/c4c73a5cee9783af2609b4012b4a076800fe132b))
   - code refactoring ([cd74b9e](https://github.com/vitkuz573/free-id/commit/cd74b9edfd035181018735aa396efb58046317f7))
 
 ## [2.2.6](https://github.com/vitkuz573/free-id/releases/tag/2.2.6) - 2022-05-10 14:56:22
