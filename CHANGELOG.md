@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## Unreleased
+
+Changes unreleased.
+
+### Bug Fixes
+
+- main:
+  - update phpunit.xml.dist ([5561f4f](https://github.com/vitkuz573/free-id/commit/5561f4f875c13e6c9d9d584c23ce990bcc3fedb0))
+
 ## [2.2.5](https://github.com/vitkuz573/free-id/releases/tag/2.2.5) - 2022-05-10 06:08:14
 
 **Full Changelog**: https://github.com/vitkuz573/free-id/compare/2.2.4...2.2.5
