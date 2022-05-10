@@ -4,6 +4,11 @@
 
 Changes unreleased.
 
+### Bug Fixes
+
+- main:
+  - mini code & docs fixes ([96e7012](https://github.com/vitkuz573/free-id/commit/96e7012225b17601f7f1409250ea75664c7e8ac1))
+
 ### Documentation
 
 - main:
