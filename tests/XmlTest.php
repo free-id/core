@@ -10,7 +10,7 @@ use Vitkuz573\FreeId\Parsers\File\Xml;
 final class XmlTest extends TestCase
 {
     /** @test */
-    public function testXml()
+    public function testXml(): void
     {
         $free_id = new Xml(__DIR__.'/files/test.xml', 'node');
         $this->assertTrue($free_id->find() === 3);

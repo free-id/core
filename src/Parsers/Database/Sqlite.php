@@ -36,7 +36,9 @@ class Sqlite extends BaseParser implements SqliteDatabase
         try {
             $dbh = new PDO(
                 'sqlite:' . $this->path,
-                options: $this->getPdoOptions(),
+                null,
+                null,
+                $this->getPdoOptions(),
             );
         } catch (PDOException $e) {
             die($e->getMessage());

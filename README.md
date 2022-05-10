@@ -64,7 +64,7 @@ echo $free_id->find();
 use Vitkuz573\FreeId\Parsers\Database\MySql;
 
 $free_id = new MySql('127.0.0.1', 'test', 'items', ['username' => 'root', 'password' => '']);
-$free_id->find();
+echo $free_id->find();
 ```
 
 #### SQLite
@@ -74,7 +74,7 @@ $free_id->find();
 use Vitkuz573\FreeId\Parsers\Database\Sqlite;
 
 $free_id = new Sqlite('db.sqlite3', 'items');
-$free_id->find();
+echo $free_id->find();
 ```
 
 ## 🆑 Change log
