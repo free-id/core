@@ -18,14 +18,14 @@
 
 ## ⚡️ Quick start
 
-Install the package using Composer
+Install the package using Composer:
 ```bash
 composer require vitkuz573/free-id
 ```
 
 ##  💡 Usage
 
-See [Wiki](https://github.com/vitkuz573/free-id/wiki)
+See [Wiki](https://github.com/vitkuz573/free-id/wiki/Usage).
 
 ## 🆑 Change log
 
