@@ -14,6 +14,11 @@ Changes unreleased.
 - main:
   - update phpunit.xml.dist ([5561f4f](https://github.com/vitkuz573/free-id/commit/5561f4f875c13e6c9d9d584c23ce990bcc3fedb0))
 
+### Documentation
+
+- main:
+  - adding pgsql parser documentation ([ffe96c2](https://github.com/vitkuz573/free-id/commit/ffe96c2c5d6e79a426681248b3d56a25070ff8aa))
+
 ## [2.2.5](https://github.com/vitkuz573/free-id/releases/tag/2.2.5) - 2022-05-10 06:08:14
 
 **Full Changelog**: https://github.com/vitkuz573/free-id/compare/2.2.4...2.2.5
