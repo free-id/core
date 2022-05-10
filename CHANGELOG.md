@@ -17,6 +17,7 @@ Changes unreleased.
 ### Documentation
 
 - main:
+  - update wiki url ([47f5293](https://github.com/vitkuz573/free-id/commit/47f5293f83bd591dd6aee95f754bdb4ef7f80854))
   - adding wiki url ([aca20cd](https://github.com/vitkuz573/free-id/commit/aca20cd95bb0c7f19f844aa7ccb6902837bc0fba))
   - adding pgsql parser documentation ([ffe96c2](https://github.com/vitkuz573/free-id/commit/ffe96c2c5d6e79a426681248b3d56a25070ff8aa))
 
