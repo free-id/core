@@ -25,67 +25,7 @@ composer require vitkuz573/free-id
 
 ##  💡 Usage
 
-### File
-
-#### XML
-
-```php
-<?php
-
-use Vitkuz573\FreeId\Parsers\File\Xml;
-
-$free_id = new Xml('test.xml', 'node');
-echo $free_id->find();
-
-$free_id = new Xml('test.xml', 'node', 'other_id', '10');
-echo $free_id->find();
-```
-
-#### Json
-
-```php
-<?php
-
-use Vitkuz573\FreeId\Parsers\File\Json;
-
-$free_id = new Json('test.json', 'nodes');
-echo $free_id->find();
-
-$free_id = new Json('test.json', 'nodes', 'other_id', '10');
-echo $free_id->find();
-```
-
-### Database
-
-#### MySQL
-```php
-<?php
-
-use Vitkuz573\FreeId\Parsers\Database\MySql;
-
-$free_id = new MySql('127.0.0.1', 'test', 'items', ['username' => 'root', 'password' => '']);
-echo $free_id->find();
-```
-
-#### PostgreSQL
-```php
-<?php
-
-use Vitkuz573\FreeId\Parsers\Database\PgSql;
-
-$free_id = new PgSql('127.0.0.1', 'test', 'items', ['username' => 'postgres', 'password' => 'postgres']);
-echo $free_id->find();
-```
-
-#### SQLite
-```php
-<?php
-
-use Vitkuz573\FreeId\Parsers\Database\Sqlite;
-
-$free_id = new Sqlite('db.sqlite3', 'items');
-echo $free_id->find();
-```
+See [Wiki](https://github.com/vitkuz573/free-id/wiki)
 
 ## 🆑 Change log
 
