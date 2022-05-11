@@ -12,7 +12,6 @@ class Json extends BaseParser implements File
     private string $path;
     private string $parent_element;
     private string $attribute;
-    private int $id;
 
     public function __construct(
         string $path,
@@ -20,11 +19,10 @@ class Json extends BaseParser implements File
         string $attribute = 'id',
         int $start_id = 1,
     ) {
-        parent::__construct([], []);
+        parent::__construct([], $start_id);
         $this->path = $path;
         $this->parent_element = $parent_element;
         $this->attribute = $attribute;
-        $this->id = $start_id;
     }
 
     public function find(): int
@@ -35,6 +33,6 @@ class Json extends BaseParser implements File
             }
         }
 
-        return $this->enumerate($this->data, $this->id);
+        return $this->enumerate();
     }
 }

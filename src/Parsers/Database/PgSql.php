@@ -15,7 +15,6 @@ class PgSql extends BaseParser implements SqlDatabase
     private string $table;
     private array $credentials;
     private string $column;
-    private int $id;
 
     public function __construct(
         string $host,
@@ -27,14 +26,13 @@ class PgSql extends BaseParser implements SqlDatabase
         string $charset = null,
         int    $start_id = 1,
     ) {
-        parent::__construct([], []);
+        parent::__construct([], $start_id);
         $this->host = $host;
         $this->port = $port;
         $this->db = $db;
         $this->table = $table;
         $this->credentials = $credentials;
         $this->column = $column;
-        $this->id = $start_id;
     }
 
     public function find(): int
@@ -43,9 +41,9 @@ class PgSql extends BaseParser implements SqlDatabase
             'pgsql:host=' . $this->host . ';port=' . $this->port . ';dbname=' . $this->db,
             $this->credentials,
             $this->table,
-            $this->column
+            $this->column,
         );
 
-        return $this->enumerate($this->data, $this->id);
+        return $this->enumerate();
     }
 }

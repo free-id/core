@@ -11,12 +11,12 @@ use Vitkuz573\FreeId\Exceptions\EmptyArrayException;
 abstract class Parser
 {
     protected array $data;
-    protected array $elements;
+    protected int $id;
 
-    public function __construct($data, $elements)
+    public function __construct($data, $id)
     {
         $this->data = $data;
-        $this->elements = $elements;
+        $this->id = $id;
     }
 
     protected function getPdoOptions(): array
@@ -46,14 +46,10 @@ abstract class Parser
         return $this->data;
     }
 
-    protected function enumerate(array $data, int $id): int
+    protected function enumerate(): int
     {
-        foreach ($data as $element) {
-            $this->elements[] = (int) $element;
-        }
-
         try {
-            if (empty($this->elements)) {
+            if (empty($this->data)) {
                 throw new EmptyArrayException('Elements not found!');
             }
         } catch (EmptyArrayException $e) {
@@ -61,10 +57,10 @@ abstract class Parser
         }
 
         while (true) {
-            if (! in_array($id, $this->elements)) {
-                return $id;
+            if (! in_array($this->id, $this->data)) {
+                return $this->id;
             }
-            $id += 1;
+            $this->id += 1;
         }
     }
 }
