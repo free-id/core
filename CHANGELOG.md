@@ -4,6 +4,11 @@
 
 Changes unreleased.
 
+### Bug Fixes
+
+- main:
+  - the base parser is now an abstract class ([48336e7](https://github.com/vitkuz573/free-id/commit/48336e744eab5b45bf884e9a368f5f607e0c36eb))
+
 ### Refactor
 
 - main:
