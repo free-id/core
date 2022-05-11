@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace Vitkuz573\FreeId\Exceptions;
 
-use Exception;
 use Throwable;
 
-class ElementsNotFoundException extends Exception
+class EmptyArrayException extends BaseException
 {
     public function __construct(
-        string $message = "Elements not found!",
+        string $message = "The array is empty!",
         int $code = 0,
         ?Throwable
         $previous = null

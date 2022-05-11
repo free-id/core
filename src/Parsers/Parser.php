@@ -6,7 +6,7 @@ namespace Vitkuz573\FreeId\Parsers;
 
 use PDO;
 use PDOException;
-use Vitkuz573\FreeId\Exceptions\ElementsNotFoundException;
+use Vitkuz573\FreeId\Exceptions\EmptyArrayException;
 
 abstract class Parser
 {
@@ -54,9 +54,9 @@ abstract class Parser
 
         try {
             if (empty($this->elements)) {
-                throw new ElementsNotFoundException();
+                throw new EmptyArrayException('Elements not found!');
             }
-        } catch (ElementsNotFoundException $e) {
+        } catch (EmptyArrayException $e) {
             die($e->getMessage());
         }
 
