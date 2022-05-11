@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## Unreleased
+
+Changes unreleased.
+
+### Refactor
+
+- main:
+  - parsers refactoring ([a742a81](https://github.com/vitkuz573/free-id/commit/a742a816a28b27b070f467743fbcbcd2ed5a7531))
+
 ## [2.2.7](https://github.com/vitkuz573/free-id/releases/tag/2.2.7) - 2022-05-11 04:26:53
 
 **Full Changelog**: https://github.com/vitkuz573/free-id/compare/2.2.6...2.2.7
