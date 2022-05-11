@@ -8,7 +8,7 @@ use PDO;
 use PDOException;
 use Vitkuz573\FreeId\Exceptions\ElementsNotFoundException;
 
-class Parser
+abstract class Parser
 {
     protected array $data;
     protected array $elements;
