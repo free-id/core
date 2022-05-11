@@ -60,7 +60,7 @@ abstract class Parser
             if (! in_array($this->id, $this->data)) {
                 return $this->id;
             }
-            $this->id += 1;
+            ++$this->id;
         }
     }
 }

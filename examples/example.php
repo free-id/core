@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+$start = microtime(true);
+
 include __DIR__ . '/../vendor/autoload.php';
 
 use Vitkuz573\FreeId\Parsers\Database\MySql;
@@ -25,6 +27,8 @@ const PGSQL_CREDENTIALS = ['username' => 'postgres', 'password' => 'postgres'];
 const SQLITE_DATABASE = 'test.sqlite3';
 const SQLITE_TABLE = 'items';
 
+echo PHP_EOL;
+
 $xml = new Xml(__DIR__ . '/../tests/files/test.xml', 'node');
 echo 'Free ID (XML): ' . $xml->find() . PHP_EOL;
 
@@ -39,3 +43,5 @@ echo 'Free ID (PostgreSQL): ' . $pgsql->find() . PHP_EOL;
 
 $sqlite = new Sqlite(SQLITE_DATABASE, SQLITE_TABLE);
 echo 'Free ID (SQLite): ' . $sqlite->find() . PHP_EOL;
+
+echo PHP_EOL . 'The script was executed in ' . (microtime(true) - $start) . ' seconds';
