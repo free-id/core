@@ -12,6 +12,7 @@ Changes unreleased.
 ### Refactor
 
 - main:
+  - exceptions refactoring ([29d9068](https://github.com/vitkuz573/free-id/commit/29d9068e03df5503912f3b4a8c128354597458f6))
   - __construct method update ([c4c73a5](https://github.com/vitkuz573/free-id/commit/c4c73a5cee9783af2609b4012b4a076800fe132b))
   - code refactoring ([cd74b9e](https://github.com/vitkuz573/free-id/commit/cd74b9edfd035181018735aa396efb58046317f7))
 
