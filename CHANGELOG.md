@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## Unreleased
+
+Changes unreleased.
+
+### Bug Fixes
+
+- main:
+  - calling the microtime function in example.php ([a9190fb](https://github.com/vitkuz573/free-id/commit/a9190fb05fc1ccf3ae3cb98f70f12e07b31523ca))
+
 ## [2.2.8](https://github.com/vitkuz573/free-id/releases/tag/2.2.8) - 2022-05-11 16:01:14
 
 **Full Changelog**: https://github.com/vitkuz573/free-id/compare/2.2.7...2.2.8
