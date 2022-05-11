@@ -1,8 +1,8 @@
 # CHANGELOG
 
-## Unreleased
+## [2.2.8](https://github.com/vitkuz573/free-id/releases/tag/2.2.8) - 2022-05-11 16:01:14
 
-Changes unreleased.
+**Full Changelog**: https://github.com/vitkuz573/free-id/compare/2.2.7...2.2.8
 
 ### Refactor
 
