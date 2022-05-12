@@ -28,7 +28,7 @@ abstract class Parser
         ];
     }
 
-    protected function getPdoData(string $dsn, array $credentials, string $table, string $column): array
+    final protected function getPdoData(string $dsn, array $credentials, string $table, string $column): array
     {
         try {
             $dbh = new PDO($dsn, $credentials['username'], $credentials['password'], $this->getPdoOptions());
@@ -46,7 +46,7 @@ abstract class Parser
         return $this->data;
     }
 
-    protected function enumerate(): int
+    final protected function enumerate(): int
     {
         try {
             if (empty($this->data)) {
