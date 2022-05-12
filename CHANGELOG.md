@@ -7,6 +7,7 @@ Changes unreleased.
 ### Bug Fixes
 
 - main:
+  - fix json parser ([00b8768](https://github.com/vitkuz573/free-id/commit/00b87680d2954300176fbabdd8c708a7bb70be08))
   - adding phpstan and fixing typehint ([949f4d3](https://github.com/vitkuz573/free-id/commit/949f4d34a63dffdd8cc03db37380bf9772e6460a))
   - calling the microtime function in example.php ([a9190fb](https://github.com/vitkuz573/free-id/commit/a9190fb05fc1ccf3ae3cb98f70f12e07b31523ca))
 
