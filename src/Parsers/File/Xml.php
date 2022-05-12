@@ -31,8 +31,8 @@ class Xml extends BaseParser implements File
         $dom = new DOMDocument();
         $dom->load($this->path);
 
-        foreach ($dom->getElementsByTagName($this->child_element) as $node) {
-            $this->data[] = $node->getAttribute($this->attribute);
+        foreach ($dom->getElementsByTagName($this->child_element) as $element) {
+            $this->data[] = (int) $element->getAttribute($this->attribute);
         }
 
         return $this->enumerate();

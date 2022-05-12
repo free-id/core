@@ -10,7 +10,7 @@ use Vitkuz573\FreeId\Exceptions\EmptyArrayException;
 
 abstract class Parser
 {
-    /** @var array<int, int|string> */
+    /** @var array<int, int> */
     protected array $data;
     protected int $id;
 
@@ -37,9 +37,9 @@ abstract class Parser
 
     /**
      * @param array{username: string|null, password: string|null} $credentials
-     * @return array<int, int|string>
+     * @return array<int, int>
      */
-    final protected function getPdoData(string $dsn, array $credentials, string $table, string $column)
+    final protected function getPdoData(string $dsn, array $credentials, string $table, string $column): array
     {
         try {
             $dbh = new PDO($dsn, $credentials['username'], $credentials['password'], $this->getPdoOptions());
@@ -51,7 +51,7 @@ abstract class Parser
         $sth->execute();
 
         foreach ($sth->fetchAll() as $element) {
-            $this->data[] = $element[$column];
+            $this->data[] = (int) $element[$column];
         }
 
         return $this->data;

@@ -40,7 +40,7 @@ class Json extends BaseParser implements File
 
         foreach ((array) json_decode($content, true)[$this->parent_element] as $element) {
             if (array_key_exists($this->attribute, $element)) {
-                $this->data[] = $element[$this->attribute];
+                $this->data[] = (int) $element[$this->attribute];
             }
         }
 
