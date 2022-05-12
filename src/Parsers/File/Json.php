@@ -38,8 +38,7 @@ class Json extends BaseParser implements File
             die($e->getMessage());
         }
 
-        foreach ((array) json_decode($content, true)[$this->parent_element] as $key => $value) {
-            $element[$key] = $value;
+        foreach ((array) json_decode($content, true)[$this->parent_element] as $element) {
             if (array_key_exists($this->attribute, $element)) {
                 $this->data[] = $element[$this->attribute];
             }
