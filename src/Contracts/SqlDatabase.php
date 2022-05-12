@@ -6,6 +6,9 @@ namespace Vitkuz573\FreeId\Contracts;
 
 interface SqlDatabase
 {
+    /**
+     * @param array{username: string, password: string} $credentials
+     */
     public function __construct(
         string $host,
         string $port,

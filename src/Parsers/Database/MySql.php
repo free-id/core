@@ -13,6 +13,7 @@ class MySql extends BaseParser implements SqlDatabase
     private string $port;
     private string $db;
     private string $table;
+    /** @var array{username: string, password: string} */
     private array $credentials;
     private string $column;
     private string $charset;

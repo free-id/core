@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Vitkuz573\FreeId\Parsers\File;
 
+use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use Vitkuz573\FreeId\Contracts\File;
 use Vitkuz573\FreeId\Parsers\Parser as BaseParser;
 
@@ -27,7 +28,18 @@ class Json extends BaseParser implements File
 
     public function find(): int
     {
-        foreach (json_decode(file_get_contents($this->path), true)[$this->parent_element] as $element) {
+        $content = @file_get_contents($this->path);
+
+        try {
+            if ($content === false) {
+                throw new FileNotFoundException();
+            }
+        } catch (FileNotFoundException $e) {
+            die($e->getMessage());
+        }
+
+        foreach ((array) json_decode($content, true)[$this->parent_element] as $key => $value) {
+            $element[$key] = $value;
             if (array_key_exists($this->attribute, $element)) {
                 $this->data[] = $element[$this->attribute];
             }

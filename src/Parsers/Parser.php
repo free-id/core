@@ -10,16 +10,23 @@ use Vitkuz573\FreeId\Exceptions\EmptyArrayException;
 
 abstract class Parser
 {
+    /** @var array<int, int|string> */
     protected array $data;
     protected int $id;
 
-    public function __construct($data, $id)
+    /**
+     * @param array<int> $data
+     */
+    public function __construct(array $data, int $id)
     {
         $this->data = $data;
         $this->id = $id;
     }
 
-    protected function getPdoOptions(): array
+    /**
+     * @return array<int, int|bool>
+     */
+    protected function getPdoOptions()
     {
         return [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -28,7 +35,11 @@ abstract class Parser
         ];
     }
 
-    final protected function getPdoData(string $dsn, array $credentials, string $table, string $column): array
+    /**
+     * @param array{username: string|null, password: string|null} $credentials
+     * @return array<int, int|string>
+     */
+    final protected function getPdoData(string $dsn, array $credentials, string $table, string $column)
     {
         try {
             $dbh = new PDO($dsn, $credentials['username'], $credentials['password'], $this->getPdoOptions());
