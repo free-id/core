@@ -15,6 +15,7 @@ Changes unreleased.
 ### Refactor
 
 - main:
+  - update base parser ([6022a72](https://github.com/vitkuz573/free-id/commit/6022a72e3d115277c32768128d02b1c525ea09c2))
   - some base parser methods are declared as final ([faa9a1c](https://github.com/vitkuz573/free-id/commit/faa9a1cb47d701ae0fa2456f9e89f6531fa93df6))
   - update example ([3cd95f8](https://github.com/vitkuz573/free-id/commit/3cd95f84fdd248f924b7d8796f9b5ec05e9499e0))
 
