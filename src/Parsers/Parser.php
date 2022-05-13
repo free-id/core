@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Vitkuz573\FreeId\Parsers;
 
 use PDO;
-use PDOException;
-use Vitkuz573\FreeId\Exceptions\BaseException;
 use Vitkuz573\FreeId\Exceptions\EmptyArrayException;
 
 abstract class Parser
@@ -45,13 +43,7 @@ abstract class Parser
         $dbh = new PDO($dsn, $credentials['username'], $credentials['password'], $this->getPdoOptions());
         $sth = $dbh->query('SELECT ' . $column . ' FROM ' . $table);
 
-        try {
-            if ($sth === false) {
-                throw new PDOException('Column not found');
-            }
-        } catch (PDOException $e) {
-            die($e->getMessage());
-        }
+        $sth !== false ?: die();
 
         return $sth->fetchAll();
     }
