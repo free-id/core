@@ -6,6 +6,7 @@ namespace Vitkuz573\FreeId\Parsers;
 
 use PDO;
 use PDOException;
+use Vitkuz573\FreeId\Exceptions\BaseException;
 use Vitkuz573\FreeId\Exceptions\EmptyArrayException;
 
 abstract class Parser
@@ -26,11 +27,11 @@ abstract class Parser
     /**
      * @return array<int, int|bool>
      */
-    protected function getPdoOptions()
+    final protected function getPdoOptions()
     {
         return [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_COLUMN,
             PDO::ATTR_EMULATE_PREPARES => false,
         ];
     }
@@ -41,20 +42,18 @@ abstract class Parser
      */
     final protected function getPdoData(string $dsn, array $credentials, string $table, string $column): array
     {
+        $dbh = new PDO($dsn, $credentials['username'], $credentials['password'], $this->getPdoOptions());
+        $sth = $dbh->query('SELECT ' . $column . ' FROM ' . $table);
+
         try {
-            $dbh = new PDO($dsn, $credentials['username'], $credentials['password'], $this->getPdoOptions());
-            $sth = $dbh->prepare('SELECT ' . $column . ' FROM ' . $table);
+            if ($sth === false) {
+                throw new PDOException('Column not found');
+            }
         } catch (PDOException $e) {
             die($e->getMessage());
         }
 
-        $sth->execute();
-
-        foreach ($sth->fetchAll() as $element) {
-            $this->data[] = (int) $element[$column];
-        }
-
-        return $this->data;
+        return $sth->fetchAll();
     }
 
     final protected function enumerate(): int
