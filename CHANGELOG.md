@@ -15,6 +15,7 @@ Changes unreleased.
 ### Refactor
 
 - main:
+  - update composer.json ([dbae42e](https://github.com/vitkuz573/free-id/commit/dbae42eabbd7553220d12aa67ea0335ed13e39e9))
   - update base parser ([fd6bf33](https://github.com/vitkuz573/free-id/commit/fd6bf339cf0373d2e9d03d8d113fdce8c3b73a85))
   - update base parser ([6022a72](https://github.com/vitkuz573/free-id/commit/6022a72e3d115277c32768128d02b1c525ea09c2))
   - some base parser methods are declared as final ([faa9a1c](https://github.com/vitkuz573/free-id/commit/faa9a1cb47d701ae0fa2456f9e89f6531fa93df6))
