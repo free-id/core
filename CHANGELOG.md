@@ -1,8 +1,8 @@
 # CHANGELOG
 
-## Unreleased
+## [3.0.0](https://github.com/vitkuz573/free-id/releases/tag/3.0.0) - 2022-05-13 06:24:35
 
-Changes unreleased.
+**Full Changelog**: https://github.com/vitkuz573/free-id/compare/2.2.8...3.0.0
 
 ### Bug Fixes
 
