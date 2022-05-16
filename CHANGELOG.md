@@ -9,6 +9,11 @@ Changes unreleased.
 - main:
   - allocating PDO methods to a trait ([0b67fc3](https://github.com/vitkuz573/free-id/commit/0b67fc3ce7f49af5392c736ec747bec9fe25a6fb))
 
+### Refactor
+
+- main:
+  - putting properties into traits ([a6ff21b](https://github.com/vitkuz573/free-id/commit/a6ff21b69af039c37ece135465acbab50f76bc4b))
+
 ## [3.0.0](https://github.com/vitkuz573/free-id/releases/tag/3.0.0) - 2022-05-13 06:24:35
 
 **Full Changelog**: https://github.com/vitkuz573/free-id/compare/2.2.8...3.0.0
