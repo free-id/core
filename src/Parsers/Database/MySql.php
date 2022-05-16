@@ -4,11 +4,14 @@ declare(strict_types=1);
 
 namespace Vitkuz573\FreeId\Parsers\Database;
 
+use Vitkuz573\FreeId\Concerns\Database;
 use Vitkuz573\FreeId\Contracts\SqlDatabase;
 use Vitkuz573\FreeId\Parsers\Parser as BaseParser;
 
 class MySql extends BaseParser implements SqlDatabase
 {
+    use Database;
+
     private string $host;
     private string $port;
     private string $db;
@@ -40,7 +43,7 @@ class MySql extends BaseParser implements SqlDatabase
 
     public function find(): int
     {
-        $this->data = $this->getPdoData(
+        $this->data = $this->getData(
             'mysql:host=' . $this->host . ';port=' . $this->port . ';dbname=' . $this->db . ';charset=' . $this->charset,
             $this->credentials,
             $this->table,

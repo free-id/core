@@ -4,11 +4,14 @@ declare(strict_types=1);
 
 namespace Vitkuz573\FreeId\Parsers\Database;
 
+use Vitkuz573\FreeId\Concerns\Database;
 use Vitkuz573\FreeId\Contracts\SqliteDatabase;
 use Vitkuz573\FreeId\Parsers\Parser as BaseParser;
 
 class Sqlite extends BaseParser implements SqliteDatabase
 {
+    use Database;
+
     private string $path;
     private string $table;
     private string $column;
@@ -27,7 +30,7 @@ class Sqlite extends BaseParser implements SqliteDatabase
 
     public function find(): int
     {
-        $this->data = $this->getPdoData(
+        $this->data = $this->getData(
             'sqlite:' . $this->path,
             ['username' => null, 'password' => null],
             $this->table,
