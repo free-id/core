@@ -5,21 +5,12 @@ declare(strict_types=1);
 namespace Vitkuz573\FreeId\Parsers\Database;
 
 use Vitkuz573\FreeId\Concerns\Database;
-use Vitkuz573\FreeId\Contracts\SqlDatabase;
+use Vitkuz573\FreeId\Contracts\SqlDatabase as SqlDatabaseContract;
 use Vitkuz573\FreeId\Parsers\Parser as BaseParser;
 
-class MySql extends BaseParser implements SqlDatabase
+class MySql extends BaseParser implements SqlDatabaseContract
 {
     use Database;
-
-    private string $host;
-    private string $port;
-    private string $db;
-    private string $table;
-    /** @var array{username: string, password: string} */
-    private array $credentials;
-    private string $column;
-    private string $charset;
 
     public function __construct(
         string $host,

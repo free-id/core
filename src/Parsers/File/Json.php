@@ -5,14 +5,13 @@ declare(strict_types=1);
 namespace Vitkuz573\FreeId\Parsers\File;
 
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;
-use Vitkuz573\FreeId\Contracts\File;
+use Vitkuz573\FreeId\Concerns\File;
+use Vitkuz573\FreeId\Contracts\File as FileContract;
 use Vitkuz573\FreeId\Parsers\Parser as BaseParser;
 
-class Json extends BaseParser implements File
+class Json extends BaseParser implements FileContract
 {
-    private string $path;
-    private string $parent_element;
-    private string $attribute;
+    use File;
 
     public function __construct(
         string $path,

@@ -8,6 +8,16 @@ use PDO;
 
 trait Database
 {
+    protected string $path;
+    protected string $host;
+    protected string $port;
+    protected string $db;
+    protected string $table;
+    /** @var array{username: string, password: string} */
+    protected array $credentials;
+    protected string $column;
+    protected string $charset;
+
     /**
      * @return array<int, int|bool>
      */

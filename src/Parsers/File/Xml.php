@@ -5,14 +5,13 @@ declare(strict_types=1);
 namespace Vitkuz573\FreeId\Parsers\File;
 
 use DOMDocument;
-use Vitkuz573\FreeId\Contracts\File;
+use Vitkuz573\FreeId\Concerns\File;
+use Vitkuz573\FreeId\Contracts\File as FileContract;
 use Vitkuz573\FreeId\Parsers\Parser as BaseParser;
 
-class Xml extends BaseParser implements File
+class Xml extends BaseParser implements FileContract
 {
-    private string $path;
-    private string $child_element;
-    private string $attribute;
+    use File;
 
     public function __construct(
         string $path,
