@@ -14,6 +14,10 @@ Changes unreleased.
 - main:
   - putting properties into traits ([a6ff21b](https://github.com/vitkuz573/free-id/commit/a6ff21b69af039c37ece135465acbab50f76bc4b))
 
+## [3.0.1](https://github.com/vitkuz573/free-id/releases/tag/3.0.1) - 2022-05-13 06:28:18
+
+**Full Changelog**: https://github.com/vitkuz573/free-id/compare/3.0.0...3.0.1
+
 ## [3.0.0](https://github.com/vitkuz573/free-id/releases/tag/3.0.0) - 2022-05-13 06:24:35
 
 **Full Changelog**: https://github.com/vitkuz573/free-id/compare/2.2.8...3.0.0
