@@ -1,11 +1,11 @@
 {
-    "name": "vitkuz573/free-id-core",
+    "name": "free-id/core",
     "description": "The core of the free-id package is designed to search for free identifiers in files, databases and much more...",
     "keywords": [
         "free id",
         "vitkuz573"
     ],
-    "homepage": "https://github.com/vitkuz573/free-id-core",
+    "homepage": "https://github.com/free-id/core",
     "license": "MIT",
     "authors": [
         {
