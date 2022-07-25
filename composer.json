@@ -1,5 +1,5 @@
 {
-    "name": "vitkuz573/free-id",
+    "name": "vitkuz573/free-id-core",
     "description": "Package for obtaining a free identifier in files, databases, etc.",
     "keywords": [
         "free id",
