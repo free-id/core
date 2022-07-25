@@ -3,7 +3,7 @@
     "description": "The core of the free-id package is designed to search for free identifiers in files, databases and much more...",
     "keywords": [
         "free id",
-        "vitkuz573"
+        "core"
     ],
     "homepage": "https://github.com/free-id/core",
     "license": "MIT",
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Vitkuz573\\FreeId\\Core\\": "src"
+            "FreeId\\Core\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Vitkuz573\\FreeId\\Core\\Tests\\": "tests"
+            "FreeId\\Core\\Tests\\": "tests"
         }
     },
     "scripts": {

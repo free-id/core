@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Vitkuz573\FreeId\Core\Exceptions;
+namespace FreeId\Core\Exceptions;
 
 use Exception;
 

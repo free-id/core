@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Vitkuz573\FreeId\Core;
+namespace FreeId\Core;
 
-use Vitkuz573\FreeId\Core\Exceptions\EmptyArrayException;
+use FreeId\Core\Exceptions\EmptyArrayException;
 
 abstract class Parser
 {
