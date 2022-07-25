@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Vitkuz573\FreeId\Contracts;
+namespace Vitkuz573\FreeIdCore\Contracts;
 
 interface SqlDatabase
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Vitkuz573\FreeId\Concerns;
+namespace Vitkuz573\FreeIdCore\Concerns;
 
 trait File
 {

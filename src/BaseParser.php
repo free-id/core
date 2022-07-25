@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Vitkuz573\FreeId;
+namespace Vitkuz573\FreeIdCore;
 
 use Vitkuz573\FreeId\Exceptions\EmptyArrayException;
 
