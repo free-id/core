@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Vitkuz573\\FreeIdCore\\": "src"
+            "Vitkuz573\\FreeId\\Core\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Vitkuz573\\FreeIdCore\\Tests\\": "tests"
+            "Vitkuz573\\FreeId\\Core\\Tests\\": "tests"
         }
     },
     "scripts": {

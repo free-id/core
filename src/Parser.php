@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Vitkuz573\FreeIdCore;
+namespace Vitkuz573\FreeId\Core;
 
-use Vitkuz573\FreeId\Exceptions\EmptyArrayException;
+use Vitkuz573\FreeId\Core\Exceptions\EmptyArrayException;
 
-abstract class BaseParser
+abstract class Parser
 {
     /** @var array<int, int> */
     protected array $data;
