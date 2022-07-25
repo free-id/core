@@ -1,6 +1,6 @@
 {
     "name": "vitkuz573/free-id-core",
-    "description": "Package for obtaining a free identifier in files, databases, etc.",
+    "description": "The core of the free-id package is designed to search for free identifiers in files, databases and much more...",
     "keywords": [
         "free id",
         "vitkuz573"
